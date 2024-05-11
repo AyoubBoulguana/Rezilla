@@ -1,0 +1,1126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezilla Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              mainPurple: "#3A0CA3",
+              secondPurpel: "#4361EE",
+              white: "#FFF",
+              black: "#0B090A",
+              gray: "#D4D4D4",
+            },
+            backgroundImage: {
+              myBg: "url('images/Rectangle 4.png')",
+              myBg2: "url('images/Ellipse 12.png')",
+            },
+            backgroundPosition: {
+              bgPosition: "left top 80px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes slide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .animate-slide {
+          animation: slide 10s linear infinite;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#FFF] font-poppins">
+    <div
+      class="sm:flex justify-between items-center bg-mainPurple px-[100px] py-[14px] hidden"
+    >
+      <div class="flex items-center space-x-[8px]">
+        <div>
+          <img src="images/ icon _pin.png" alt="" />
+        </div>
+        <div>
+          <p class="font-poppins text-white text-sm">
+            Rezilla, 18 Grattan St, Brooklyn
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-[30px]">
+        <div class="flex items-center space-x-[8px]">
+          <div>
+            <img src="images/ icon _phone.png" alt="" />
+          </div>
+          <div>
+            <p class="font-poppins text-white text-sm">+1 206-214-2298</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-[8px]">
+          <div>
+            <img src="images/icon _mail.png" alt="" />
+          </div>
+          <div>
+            <p class="font-poppins text-white text-sm">support@rezilla.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="bg-myBg">
+      <nav
+        class="flex justify-between items-center px-[30px] sm:px-[100px] py-[21px]"
+      >
+        <ul class="sm:flex font-poppins text-black hidden">
+          <li class="bg-[#4361EE4D] px-[16px] py-[13px] rounded-full">
+            <a href="">Home</a>
+          </li>
+          <li class="px-[16px] py-[13px]">
+            <a href="">About</a>
+          </li>
+          <li class="px-[16px] py-[13px]">
+            <a href="">Listing</a>
+          </li>
+          <li class="px-[16px] py-[13px]">
+            <a href="">Services</a>
+          </li>
+          <li class="px-[16px] py-[13px]">
+            <a href="">Blogs</a>
+          </li>
+        </ul>
+        <div>
+          <img class="w-[124px] h-[50px]" src="images/logo.png" alt="" />
+        </div>
+        <div class="sm:flex space-x-[20px] hidden">
+          <div class="flex items-center space-x-[8px]">
+            <div>
+              <img src="images/icon _user circle.png" alt="" />
+            </div>
+            <div class="sm:block hidden">
+              <p class="text-black">Login/Register</p>
+            </div>
+          </div>
+          <div>
+            <button
+              class="flex items-center px-[26px] py-[16px] bg-mainPurple space-x-[8px] rounded-full text-white"
+            >
+              <img src="images/icon-House.png" alt="" />
+              <p>Add Listing</p>
+            </button>
+          </div>
+        </div>
+        <div class="block sm:hidden" id="burgerIcon">
+          <img src="images/icon _hamburger menu_.png" alt="" />
+        </div>
+      </nav>
+
+      <div
+        class="sm:hidden hidden flex flex-col justify-center items-center w-full space-y-[10px] font-poppins text-black"
+        id="menu"
+      >
+        <div class="bg-white border-b-2 border-mainPurple">
+          <a href="">Home</a>
+        </div>
+        <div class="bg-white border-b-2 border-mainPurple">
+          <a href="">About</a>
+        </div>
+        <div class="bg-white border-b-2 border-mainPurple">
+          <a href="">Lisening</a>
+        </div>
+        <div class="bg-white border-b-2 border-mainPurple">
+          <a href="">Services</a>
+        </div>
+        <div class="bg-white border-b-2 border-mainPurple">
+          <a href="">Blogs</a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row mt-[111px] px-[30px] sm:px-[100px] space-y-[260px] sm:space-y-[0px] space-x-[0px] sm:space-x-[160px]"
+      >
+        <div class="space-y-[30px]">
+          <p
+            class="font-poppins text-xl font-medium tracking-wider text-mainPurple"
+          >
+            REAL ESTATE
+          </p>
+          <h1
+            class="font-poppins text-[39.8px] leading-[47px] sm:text-6xl font-semibold text-black"
+          >
+            Find a perfect <br />
+            home you love..!
+          </h1>
+          <p class="font-poppins text-sm sm:text-md font-normal text-[#808080]">
+            Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
+            <br />
+            Integer a dolor eu sapien sodales vulputate ac in purus.
+          </p>
+          <div>
+            <div class="relative">
+              <div class="slider-image">
+                <img
+                  class="absolute z-0 opacity-0 rounded-3xl"
+                  src="images/cdvr.jpg"
+                  alt=""
+                />
+                <img
+                  class="absolute z-0 opacity-0 rounded-3xl"
+                  src="images/cez.jpg"
+                  alt=""
+                />
+                <img
+                  class="absolute z-0 opacity-0 rounded-3xl"
+                  src="images/efr.jpg"
+                  alt=""
+                />
+              </div>
+              <img
+                id="left"
+                class="absolute z-10 left-[-40px] top-[80px] sm:top-[150px] cursor-pointer"
+                src="images/left.png"
+                alt=""
+              />
+              <img
+                id="right"
+                class="absolute z-10 right-[-50px] top-[80px] sm:top-[150px] cursor-pointer"
+                src="images/right.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <form
+          class="sm:px-[40px] sm:pt-[40px] sm:pb-[40px] px-[22px] pt-[29px] pb-[40px] sm:w-[420px] w-[333px] bg-white rounded-[30px]"
+        >
+          <div
+            class="flex justify-between border-b border-[#AAAAAA] text-[16px] font-medium text-main pb-[27px]"
+          >
+            <p>For Sale</p>
+            <p>For Rent</p>
+          </div>
+          <div class="space-y-[30px] pt-[50px]">
+            <div>
+              <input
+                id="input"
+                class="w-full px-[24px] py-[20px] bg-[#D4D4D433] text-black placeholder-gray rounded-3xl focus:outline-none"
+                type="text"
+                placeholder="New York, San Francisco, etc"
+              />
+              <p
+                id="alert-message"
+                class="text-[12px] text-red-500 pl-[20px] pt-[8px]"
+              ></p>
+            </div>
+            <div>
+              <select
+                name=""
+                id=""
+                class="entry-dropdown w-full px-[24px] py-[20px] bg-[#D4D4D433] text-gray rounded-3xl focus:outline-none placeholder-gray"
+              >
+                <option value="" selected>Select Property Type</option>
+                <option value="Stodoi">Stodoi</option>
+                <option value="house">House</option>
+                <option value="Ville">Villa</option>
+              </select>
+              <p
+                id="alert-message-2"
+                class="text-[12px] text-red-500 pl-[20px] pt-[8px]"
+              ></p>
+            </div>
+            <div>
+              <select
+                name=""
+                id=""
+                class="entry-dropdown-2 w-full px-[24px] py-[20px] bg-[#D4D4D433] text-gray rounded-3xl focus:outline-none placeholder-gray"
+              >
+                <option value="" selected>Select Property Type</option>
+                <option value="Stodoi">Stodoi</option>
+                <option value="house">House</option>
+                <option value="Ville">Villa</option>
+              </select>
+              <p
+                id="alert-message-3"
+                class="text-[12px] text-red-500 pl-[20px] pt-[8px]"
+              ></p>
+            </div>
+          </div>
+          <div class="flex space-x-[10px] items-center pt-[22px]">
+            <img src="images/setting.png" alt="" />
+            <p class="text-sm font-poppins text-mainPurple">Advance Search</p>
+          </div>
+          <button
+            id="check-btn"
+            class="bg-mainPurple flex items-center space-x-[10px] w-full px-[126px] py-[20px] rounded-full mt-[64px]"
+          >
+            <img src="images/ icon _search normal 1.png" alt="" />
+            <p class="text-[16px] text-white font-poppins">Search</p>
+          </button>
+        </form>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center">
+        <img src="images/Group 39.png" alt="" />
+        <img src="images/Group 44.png" alt="" />
+      </div>
+    </header>
+    <section class="space-y-[60px] pt-[50px] bg-myBg2 bg-no-repeat bg-lift">
+      <p
+        class="flex justify-center text-[#808080] font-poppins font-medium text-sm sm:text-md"
+      >
+        Trusted by 100+ Companies across the globe!
+      </p>
+      <div
+        class="flex items-center justify-center space-x-[90px] animate-slide"
+      >
+        <img src="images/image 1.png" alt="" />
+        <img src="images/image 2.png" alt="" />
+        <img src="images/image 3.png" alt="" />
+        <img src="images/image 4.png" alt="" />
+        <img src="images/image 5.png" alt="" />
+        <img src="images/image 6.png" alt="" />
+      </div>
+    </section>
+    <section
+      class="sm:mt-[193px] mt-[100px] flex flex-col sm:flex-row justify-center gap-[43px] items-center"
+    >
+      <section>
+        <div class="w-fit mx-auto">
+          <span
+            class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium tracking-[2.91px] leading-[47px]"
+            >WHO ARE WE</span
+          >
+          <h3
+            class="sm:text-[39.8px] text-[27.6px] font-semibold sm:w-[500px] w-[333px] sm:leading-[47px] mb-[30px]"
+          >
+            Assisting individuals in locating the appropriate real estate.
+          </h3>
+          <p
+            class="sm:text-[16px] text-[13.3px] text-gray sm:leading-[26px] leading-[22px] sm:w-[535px] w-[309px] mb-[40px]"
+          >
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+            dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac
+            malesuada leo volutpat.
+          </p>
+        </div>
+        <section class="flex flex-col gap-[30px] items-center sm:items-start">
+          <div
+            class="flex gap-[25px] items-center rounded-[20px] sm:rounded-[30px] w-fit pl-[30px] sm:pr-[67px] pr-[52px] py-[30px]"
+          >
+            <img src="images/ icon _smart home_.png" alt="" class="" />
+            <div class="space-y-[15px]">
+              <p
+                class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium"
+              >
+                Donec porttitor euismod
+              </p>
+              <p
+                class="text-gray sm:text-[16px] text-[13.3px] leading-[22px] sm:leading-[26px]"
+              >
+                Nullam a lacinia ipsum, nec <br />
+                dignissim purus. Nulla
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-[25px] items-center rounded-[20px] sm:rounded-[30px] w-fit pl-[30px] sm:pr-[67px] pr-[52px] py-[30px]"
+          >
+            <img src="images/icon _user octagon_.png" alt="" class="" />
+            <div class="space-y-[15px]">
+              <p
+                class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium"
+              >
+                Donec porttitor euismod
+              </p>
+              <p class="text-gray text-[16px] leading-[22px]">
+                Nullam a lacinia ipsum, nec <br />
+                dignissim purus. Nulla
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <img src="images/houses.png" alt="" class="w-[333px] sm:w-[577px]" />
+    </section>
+
+    <section
+      class="mt-[200px] px-[30px] sm:px-[100px] flex flex-col sm:flex-row items-center space-x-[0px] space-y-[60px] space-y-[0px] sm:space-x-[200px]"
+    >
+      <div class="space-y-[30px]">
+        <p
+          class="font-poppins text-sm sm:text-xl font-medium tracking-wider text-mainPurple"
+        >
+          CHECKOUT OUR NEW
+        </p>
+        <h2 class="font-poppins text-4xl sm:text-6xl font-semibold text-black">
+          Latest Listed Properties
+        </h2>
+        <p class="text-[#808080] font-poppins font-medium text-sm sm:text-md">
+          Donec porttitor euismod dignissim. <br />
+          Nullam a lacinia ipsum, nec dignissim purus.
+        </p>
+      </div>
+      <div class="space-x-[20px] flex">
+        <button
+          class="border border-solid border-mainPurple px-[30px] py-2 rounded-full text-mainPurple hover:bg-mainPurpleDark"
+        >
+          All
+        </button>
+        <button
+          class="border border-solid border-mainPurple px-[30px] py-2 rounded-full bg-mainPurple text-white hover:bg-mainPurpleDark"
+        >
+          Sell
+        </button>
+        <button
+          class="border border-solid border-mainPurple px-[30px] py-2 rounded-full text-mainPurple hover:bg-mainPurpleDark"
+        >
+          Rent
+        </button>
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col sm:flex-row sm:pl-[100px] items-center space-x-[0px] sm:space-x-[50px] space-y-[40px] sm:space-y-[0px] mt-[50px] overflow-hidden"
+    >
+      <div class="min-w-[340px]">
+        <div class="relative">
+          <img
+            src="images/Rectangle 18.png"
+            alt=""
+            class="w-[333px] h-[340px]"
+          />
+          <div
+            class="gap-2.5 px-6 py-2.5 bg-[#FFE1E1] rounded-[20px] w-fit absolute bottom-[30px] left-[30px]"
+          >
+            <h4 class="text-[#FF1111] font-medium text-[16px]">Popular</h4>
+          </div>
+        </div>
+        <div class="mt-6 space-y-[10px]">
+          <p class="text-[27.6px] text-[19.4px] font-semibold">$ 2,389</p>
+          <p class="text-[19.4px] text-[16px] font-semibold">
+            Grand Estate on the Hilltop
+          </p>
+          <p class="text-[16px] text-[13px] leading-[26px] text-gray">
+            103 Wright CourtBurien, WA 98168
+          </p>
+          <div class="flex gap-5">
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bed_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">4 Beds</p>
+            </div>
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bathroom_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">3 Bath</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-[340px]">
+        <div class="relative">
+          <img
+            src="images/Rectangle 19.png"
+            alt=""
+            class="w-[333px] h-[340px]"
+          />
+          <div
+            class="gap-2.5 px-6 py-2.5 bg-[#D7EEFF] rounded-[20px] w-fit absolute bottom-[30px] left-[30px]"
+          >
+            <h4 class="text-[#119BFF] font-medium text-[16px]">New Listing</h4>
+          </div>
+        </div>
+        <div class="mt-6 space-y-[10px]">
+          <p class="text-[27.6px] text-[19.4px] font-semibold">$ 1,970</p>
+          <p class="text-[19.4px] text-[16px] font-semibold">
+            Serene Retreat by the Lake
+          </p>
+          <p class="text-[16px] text-[13px] leading-[26px] text-gray">
+            103 Wright CourtBurien, WA 98168
+          </p>
+          <div class="flex gap-5">
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bed_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">4 Beds</p>
+            </div>
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bathroom_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">3 Bath</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-[340px]">
+        <div class="relative">
+          <img
+            src="images/Rectangle 20.png"
+            alt=""
+            class="w-[333px] h-[340px]"
+          />
+          <div
+            class="gap-2.5 px-6 py-2.5 bg-[#F1FFF1] rounded-[20px] w-fit absolute bottom-[30px] left-[30px]"
+          >
+            <h4 class="text-[#00CE3A] font-medium text-[16px]">
+              Discounted Price
+            </h4>
+          </div>
+        </div>
+        <div class="mt-6 space-y-[10px]">
+          <p class="text-[27.6px] text-[19.4px] font-semibold">$ 3,450</p>
+          <p class="text-[19.4px] text-[16px] font-semibold">
+            Charming Cottage in the Meadow
+          </p>
+          <p class="text-[16px] text-[13px] leading-[26px] text-gray">
+            103 Wright CourtBurien, WA 98168
+          </p>
+          <div class="flex gap-5">
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bed_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">4 Beds</p>
+            </div>
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bathroom_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">3 Bath</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-[340px]">
+        <div class="relative">
+          <img
+            src="images/Rectangle 21.png"
+            alt=""
+            class="w-[333px] h-[340px]"
+          />
+          <div
+            class="gap-2.5 px-6 py-2.5 bg-[#FFE1E1] rounded-[20px] w-fit absolute bottom-[30px] left-[30px]"
+          >
+            <h4 class="text-[#FF1111] font-medium text-[16px]">Popular</h4>
+          </div>
+        </div>
+        <div class="mt-6 space-y-[10px]">
+          <p class="text-[27.6px] text-[19.4px] font-semibold">$ 2,389</p>
+          <p class="text-[19.4px] text-[16px] font-semibold">
+            Grand Estate on the Hilltop
+          </p>
+          <p class="text-[16px] text-[13px] leading-[26px] text-gray">
+            103 Wright CourtBurien, WA 98168
+          </p>
+          <div class="flex gap-5">
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bed_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">4 Beds</p>
+            </div>
+            <div class="flex gap-2.5 items-center">
+              <img src="images/ icon _bathroom_.png" alt="" />
+              <p class="text-[16px] leading-[26px]">3 Bath</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="mt-[100px] sm:mt-[200px] bg-[#D4D4D4]/30 pt-[100px] pb-[100px] sm:pb-[137px] text-center"
+    >
+      <p class="sm:mb-[30px] mb-[10px]">OUR SERVICES</p>
+      <h3
+        class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[10px] text-[#0B090A] w-[274px] sm:w-fit mx-auto"
+      >
+        Donec porttitor euismod dignissim
+      </h3>
+      <section
+        class="sm:mt-[70px] mt-[60px] flex flex-col sm:flex-row items-center justify-center gap-[30px] sm:gap-[50px]"
+      >
+        <div
+          class="flex flex-col items-center bg-white rounded-[20px] sm:rounded-[30px] sm:w-[340px] w-[333px] sm:p-[60px] py-[40px] px-[47px]"
+        >
+          <div
+            class="rounded-full bg-mainPurple w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] flex items-center justify-center"
+          >
+            <img
+              src="images/ icon _search_.png"
+              alt=""
+              class="w-[26px] h-[26px] sm:w-[40px] sm:h-[40px]"
+            />
+          </div>
+          <p class="text-[19.4px] font-medium sm:mt-[30px] mt-[20px]">
+            Buy a New Home
+          </p>
+          <p
+            class="text-[13.3px] text-gray leading-[22px] sm:text-[16px] sm:leading-[26px] sm:mt-[20px] mt-[15px]"
+          >
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+            dignissim purus.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center bg-white rounded-[20px] sm:rounded-[30px] sm:w-[340px] w-[333px] sm:p-[60px] py-[40px] px-[47px]"
+        >
+          <div
+            class="rounded-full bg-mainPurple w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] flex items-center justify-center"
+          >
+            <img
+              src="images/ icon _home_.png"
+              alt=""
+              class="w-[26px] h-[26px] sm:w-[40px] sm:h-[40px]"
+            />
+          </div>
+          <p class="text-[19.4px] font-medium sm:mt-[30px] mt-[20px]">
+            Sell a House
+          </p>
+          <p
+            class="text-[13.3px] text-gray leading-[22px] sm:text-[16px] sm:leading-[26px] sm:mt-[20px] mt-[15px]"
+          >
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+            dignissim purus.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center bg-white rounded-[20px] sm:rounded-[30px] sm:w-[340px] w-[333px] sm:p-[60px] py-[40px] px-[47px]"
+        >
+          <div
+            class="rounded-full bg-mainPurple w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] flex items-center justify-center"
+          >
+            <img
+              src="images/ icon _bed2_.png"
+              alt=""
+              class="w-[26px] h-[26px] sm:w-[40px] sm:h-[40px]"
+            />
+          </div>
+          <p class="text-[19.4px] font-medium sm:mt-[30px] mt-[20px]">
+            Rent a House
+          </p>
+          <p
+            class="text-[13.3px] text-gray leading-[22px] sm:text-[16px] sm:leading-[26px] sm:mt-[20px] mt-[15px]"
+          >
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+            dignissim purus.
+          </p>
+        </div>
+      </section>
+    </section>
+    <section class="sm:mt-[80px] mt-[100px]">
+      <div class="sm:pl-[160px] pl-[30px]">
+        <span
+          class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium tracking-[2.91px] leading-[47px]"
+          >AREAS ACROSS THE TOWN</span
+        >
+        <h3
+          class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[10px]"
+        >
+          Neighborhood Properties
+        </h3>
+      </div>
+      <section
+        class="flex sm:gap-[50px] gap-[23px] flex-wrap sm:justify-center sm:mt-[80px] mt-[40px] pl-[30px]"
+      >
+        <div class="relative w-fit">
+          <img
+            src="images/Rectangle 17.png"
+            alt=""
+            class="w-[155px] h-[155px] sm:h-[320px] sm:w-[300px]"
+          />
+          <div
+            class="absolute sm:left-[40px] sm:bottom-[60px] left-[20px] bottom-[20px] text-white"
+          >
+            <span
+              class="text-[27.6px] sm:text-[57.3px] sm:leading-[65px] opacity-60 font-semibold"
+              >216</span
+            >
+            <p
+              class="text-[13.3px] leading-[22px] sm:text-[19.4px] sm:font-medium"
+            >
+              New York City, NY
+            </p>
+          </div>
+        </div>
+        <div class="relative w-fit">
+          <img
+            src="images/Rectangle 25.png"
+            alt=""
+            class="w-[155px] sm:w-[300px] h-[155px] sm:h-[320px]"
+          />
+          <div
+            class="absolute sm:left-[40px] sm:bottom-[60px] left-[20px] bottom-[20px] text-white"
+          >
+            <span
+              class="text-[27.6px] sm:text-[57.3px] sm:leading-[65px] opacity-60 font-semibold"
+              >141</span
+            >
+            <p
+              class="text-[13.3px] leading-[22px] sm:text-[19.4px] sm:font-medium"
+            >
+              Houston, TX
+            </p>
+          </div>
+        </div>
+        <div class="relative w-fit">
+          <img
+            src="images/Rectangle 26.png"
+            alt="home"
+            class="w-[155px] sm:w-[420px] h-[155px] sm:h-[320px]"
+          />
+          <div
+            class="absolute sm:left-[40px] sm:bottom-[60px] left-[20px] bottom-[20px] text-white"
+          >
+            <span
+              class="text-[27.6px] sm:text-[57.3px] sm:leading-[65px] opacity-60 font-semibold"
+              >212</span
+            >
+            <p
+              class="text-[13.3px] leading-[22px] sm:text-[19.4px] sm:font-medium"
+            >
+              San Diego, CA
+            </p>
+          </div>
+        </div>
+        <div class="relative w-fit">
+          <img
+            src="images/Rectangle 27.png"
+            alt=""
+            class="w-[155px] sm:w-[412px] h-[155px] sm:h-[320px]"
+          />
+          <div
+            class="absolute sm:left-[40px] sm:bottom-[60px] left-[20px] bottom-[20px] text-white"
+          >
+            <span
+              class="text-[27.6px] sm:text-[57.3px] sm:leading-[65px] opacity-60 font-semibold"
+              >183</span
+            >
+            <p
+              class="text-[13.3px] leading-[22px] sm:text-[19.4px] sm:font-medium"
+            >
+              Philadelphia, PA
+            </p>
+          </div>
+        </div>
+        <div class="relative w-fit justify-self-start">
+          <img
+            src="images/Rectangle 28.png"
+            alt=""
+            class="w-[155px] sm:w-[658px] h-[155px] sm:h-[320px]"
+          />
+          <div
+            class="absolute sm:left-[40px] sm:bottom-[60px] left-[20px] bottom-[20px] text-white"
+          >
+            <span
+              class="text-[27.6px] sm:text-[57.3px] sm:leading-[65px] opacity-60 font-semibold"
+              >112</span
+            >
+            <p
+              class="text-[13.3px] leading-[22px] sm:text-[19.4px] sm:font-medium"
+            >
+              San Francisco, CA
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section
+      class="sm:mt-[210px] mt-[100px] flex flex-col items-center text-center"
+    >
+      <div>
+        <span
+          class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium tracking-[2.91px] leading-[47px]"
+          >Introduce yourself to
+        </span>
+        <h3
+          class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[10px]"
+        >
+          Our Team of Experts
+        </h3>
+      </div>
+      <section
+        class="flex flex-wrap sm:flex-nowrap sm:gap-[70px] gap-[53px] mt-[40px] sm:mt-[100px] justify-center"
+      >
+        <div class="sm:space-y-[20px] space-y-[10px]">
+          <img
+            src="images/Rectangle 29.png"
+            alt=""
+            class="w-[120px] h-[168px] sm:w-[200px] sm:h-[280px]"
+          />
+          <p class="sm:text-[27.6px] text-[16px] font-medium sm:font-semibold">
+            Brendon M
+          </p>
+          <p
+            class="sm:text-[16px] text-[13.3px] leading-[22px] sm:leading-none text-mainPurple"
+          >
+            CEO & Founder
+          </p>
+        </div>
+        <div class="sm:space-y-[20px] space-y-[10px]">
+          <img
+            src="images/Rectangle 30.png"
+            alt=""
+            class="w-[120px] h-[168px] sm:w-[200px] sm:h-[280px]"
+          />
+          <p class="sm:text-[27.6px] text-[16px] font-medium sm:font-semibold">
+            Jodi J. Appleby
+          </p>
+          <p
+            class="sm:text-[16px] text-[13.3px] leading-[22px] sm:leading-none text-mainPurple"
+          >
+            Real Estate Developer
+          </p>
+        </div>
+        <div class="sm:space-y-[20px] space-y-[10px]">
+          <img
+            src="images/Rectangle 31.png"
+            alt=""
+            class="w-[120px] h-[168px] sm:w-[200px] sm:h-[280px]"
+          />
+          <p class="sm:text-[27.6px] text-[16px] font-medium sm:font-semibold">
+            Justin S. Meza
+          </p>
+          <p
+            class="sm:text-[16px] text-[13.3px] leading-[22px] sm:leading-none text-mainPurple"
+          >
+            Listing Agent
+          </p>
+        </div>
+        <div class="sm:space-y-[20px] space-y-[10px]">
+          <img
+            src="images/Rectangle 32.png"
+            alt=""
+            class="w-[120px] h-[168px] sm:w-[200px] sm:h-[280px]"
+          />
+          <p class="sm:text-[27.6px] text-[16px] font-medium sm:font-semibold">
+            Susan T. Smith
+          </p>
+          <p
+            class="sm:text-[16px] text-[13.3px] leading-[22px] sm:leading-none text-mainPurple"
+          >
+            Buyer's Agent
+          </p>
+        </div>
+      </section>
+    </section>
+    <section
+      class="sm:mt-[180px] mt-[100px] bg-mainPurple sm:pt-[110px] sm:pb-[100px] py-[100px] flex flex-col items-center text-center"
+    >
+      <div class="text-white">
+        <span
+          class="sm:text-[19.4px] text-[16px] font-medium tracking-[2.91px] leading-[47px]"
+          >WHAT’S TRENDING
+        </span>
+        <h3
+          class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[10px]"
+        >
+          Latest Blogs & Posts
+        </h3>
+      </div>
+      <section
+        class="flex flex-col sm:flex-row sm:gap-[50px] gap-[40px] sm:mt-[80px] mt-[40px]"
+      >
+        <section class="sm:w-[340px] w-[333px]">
+          <div class="relative">
+            <img
+              src="images/Rectangle 35.png"
+              alt=""
+              class="sm:w-[340px] w-[333px]"
+            />
+            <div
+              class="absolute top-[16px] p-2.5 rounded-b-[10px] bg-white flex flex-col left-[50px]"
+            >
+              <span
+                class="sm:text-[19.4px] text-headers font-medium text-[16px]"
+                >28</span
+              >
+              <span
+                class="sm:text-[16px] text-paras text-[13.3px] leading-[22px]"
+                >Tue</span
+              >
+            </div>
+          </div>
+          <div class="text-start space-y-[20px] flex flex-col">
+            <p
+              class="sm:text-[27.6px] text-[19.4px] font-medium text-white mt-[20px]"
+            >
+              Top 10 Home Buying Mistakes to Avoid
+            </p>
+            <p
+              class="sm:text-[16px] text-[13.3px] text-[#D4D4D4] leading-[22px]"
+            >
+              Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+            </p>
+            <img
+              src="images/Group 33.png"
+              alt="arrow"
+              class="self-end hidden sm:block"
+            />
+          </div>
+        </section>
+        <section class="sm:w-[340px] w-[333px]">
+          <div class="relative">
+            <img
+              src="images/Rectangle 36.png"
+              alt=""
+              class="sm:w-[340px] w-[333px]"
+            />
+            <div
+              class="absolute top-[16px] p-2.5 rounded-b-[10px] bg-white flex flex-col left-[50px]"
+            >
+              <span
+                class="sm:text-[19.4px] text-headers font-medium text-[16px]"
+                >08</span
+              >
+              <span
+                class="sm:text-[16px] text-paras text-[13.3px] leading-[22px]"
+                >Mon</span
+              >
+            </div>
+          </div>
+          <div class="text-start space-y-[20px] flex flex-col">
+            <p
+              class="sm:text-[27.6px] text-[19.4px] font-medium text-white mt-[20px]"
+            >
+              How to Stage Your Home for a Quick Sale
+            </p>
+            <p
+              class="sm:text-[16px] text-[13.3px] text-[#D4D4D4] leading-[22px]"
+            >
+              Nullam odio lacus, dictum quis pretium congue, vehicula venenatis
+              nunc.
+            </p>
+            <img
+              src="images/Group 33.png"
+              alt="arrow"
+              class="self-end hidden sm:block"
+            />
+          </div>
+        </section>
+        <section class="sm:w-[340px] w-[333px]">
+          <div class="relative">
+            <img
+              src="images/Rectangle 37.png"
+              alt=""
+              class="sm:w-[340px] w-[333px]"
+            />
+            <div
+              class="absolute top-[16px] p-2.5 rounded-b-[10px] bg-white flex flex-col left-[50px]"
+            >
+              <span
+                class="sm:text-[19.4px] text-headers font-medium text-[16px]"
+                >26</span
+              >
+              <span class="sm:text-[16px] text-paras">Wed</span>
+            </div>
+          </div>
+          <div class="text-start space-y-[20px] flex flex-col">
+            <p
+              class="sm:text-[27.6px] text-[19.4px] font-medium text-white mt-[20px]"
+            >
+              5 Tips for First-Time Home Sellers
+            </p>
+            <p
+              class="sm:text-[16px] text-[13.3px] text-[#D4D4D4] leading-[22px]"
+            >
+              In hac habitasse platea dictumst. Phasellus vel velit vel augue
+              maximus.
+            </p>
+            <img
+              src="images/Group 33.png"
+              alt="arrow"
+              class="self-end hidden sm:block"
+            />
+          </div>
+        </section>
+      </section>
+
+      <p
+        class="sm:hidden py-[19px] px-[30px] bg-white rounded-[30px] w-fit text-main text-[16px] font-medium mx-auto mt-[60px]"
+      >
+        View more blogs
+      </p>
+    </section>
+    <section
+      class="sm:mt-[180px] mt-[100px] flex justify-center flex-col sm:flex-row sm:gap-[195px] gap-[30px] items-center"
+    >
+      <div class="sm:w-[473px] w-[323px]">
+        <span
+          class="text-mainPurple sm:text-[19.4px] text-[16px] font-medium tracking-[2.91px] leading-[47px]"
+          >TESTIMONIALS</span
+        >
+        <h3
+          class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[10px]"
+        >
+          Look What Our Customers Say!
+        </h3>
+        <p
+          class="sm:text-[16px] text-[13.3px] sm:leading-[26px] leading-[22px]"
+        >
+          Fusce venenatis tellus a felis scelerisque, non <br />
+          pulvinar est pellentesque.
+        </p>
+        <div class="hidden sm:flex gap-[50px] mt-[60px]">
+          <img id="left-slide" src="images/Group 33 left.png" alt="arrow" />
+          <img id="right-slide" src="images/Group 33 right.png" alt="arrow" />
+        </div>
+      </div>
+
+      <section
+        class="sm:px-[60px] px-[30px] sm:pt-[34px] pb-[28px] pt-[40px] sm:w-[500px] w-[333px] font-medium text-[16px] sm:text-[19.4px] bg-white drop-shadow-xl rounded-3xl"
+      >
+        <div class="">
+          <img src="images/“.png" alt="" />
+          <div class="comment-para">
+            <p
+              class="block pb-[30px] sm:pb-[40px] border-b border-[#D4D4D4] mt-[19px]"
+            >
+              I highly recommend Jodi J. Appleby. She was attentive to our needs
+              and worked tirelessly to find us the perfect home. We couldn't be
+              happier with our new place!
+            </p>
+            <p
+              class="none pb-[30px] sm:pb-[40px] border-b border-[#D4D4D4] mt-[19px]"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              numquam quibusdam cupiditate odio. Nam animi commodi unde sequi
+              rem ut consectetur, debitis perferendis quam aliquid inventore ad,
+              a repellendus. Facere.
+            </p>
+          </div>
+          <div class="flex justify-between items-center mt-[20px]">
+            <div class="flex gap-[15px] items-center">
+              <img src="images/Ellipse 15.png" alt="" />
+              <div class="comment-name">
+                <p class="block">Barbara D. Smith</p>
+                <p class="none">Sarah</p>
+              </div>
+            </div>
+            <img src="images/Group 62.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="sm:mt-[250px] mt-[100px]">
+      <section
+        class="bg-mainPurple mx-auto w-fit rounded-[40px] flex flex-col-reverse sm:flex-row sm:h-[260px] sm:w-[1200px] sm:gap-[40px] px-[30px] pt-[100px] sm:pt-0"
+      >
+        <img
+          src="images/unsplash_7uoMmzPd2JA.png"
+          alt=""
+          class="w-[275px] h-[245px] sm:h-[303px] sm:w-[358px] sm:-translate-y-[14.4%]"
+        />
+        <section
+          class="flex sm:gap-[85px] gap-[40px] sm:items-center flex flex-col sm:flex-row"
+        >
+          <div class="text-white sm:w-[344px]">
+            <h3
+              class="sm:text-[39.8px] text-[27.6px] font-semibold sm:leading-[47px] mb-[20px]"
+            >
+              Become a Agent.
+            </h3>
+            <p
+              class="sm:text-[16px] text-[13.3px] sm:leading-[26px] leading-[22px]"
+            >
+              Fusce venenatis tellus a felis scelerisque. <br />
+              venenatis tellus a felis scelerisque.
+            </p>
+          </div>
+          <p
+            class="font-poppins py-[19px] px-[30px] bg-white rounded-[30px] w-fit text-mainPurple text-[16px] font-medium"
+          >
+            Register Now
+          </p>
+        </section>
+      </section>
+    </section>
+    <footer
+      class="sm:mt-[180px] mt-[100px] bg-[#4361EE]/10 text-[16px] sm:py-[100px] py-[60px] flex flex-col sm:flex-row sm:justify-between items-center sm:items-start sm:px-[160px]"
+    >
+      <div
+        class="font-medium flex flex-col items-center sm:items-start text-center sm:text-start sm:w-[188px]"
+      >
+        <div class="flex items-center gap-2 cursor-pointer mb-8">
+          <span
+            class="w-[50px] h-[50px] rounded-full bg-mainPurple flex items-center justify-center"
+          >
+            <img
+              src="images/ icon _home_.png"
+              alt=""
+              class="w-[18px] h-[18px]"
+            />
+          </span>
+          <h1 class="text-[20px] text-[#1E1E1E] font-semibold">Rezilla</h1>
+        </div>
+        <div
+          class="text-paras sm: flex flex-col items-center sm:items-start px-0"
+        >
+          <p>
+            2728 Hickory StreetSalt <br />
+            Lake City, UT 84104
+          </p>
+          <div class="flex gap-2.5 items-center mb-[30px] mt-[30px]">
+            <img src="images/ icon _phone_.png" alt="" class="w-4 h-4" />
+            <p>+1 206-214-2298</p>
+          </div>
+          <div class="flex gap-2.5 items-center mb-[40px]">
+            <img src="images/ icon _mail_.png" alt="mail" class="w-4 h-4" />
+            <p>support@rezilla.com</p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="leading-[22px] hidden sm:block">
+        <li class="2 text-[19.4px] font-medium leading-normal mb-[20px]">
+          Quick Links
+        </li>
+        <div class="space-y-[12px]">
+          <li>Home</li>
+          <li>About</li>
+          <li>Listings</li>
+          <li>Services</li>
+          <li>Blogs</li>
+          <li>Become a Agent</li>
+        </div>
+      </ul>
+
+      <ul class="leading-[22px] hidden sm:block">
+        <li class="2 text-[19.4px] font-medium leading-normal mb-[20px]">
+          Discovery
+        </li>
+        <div class="space-y-[12px]">
+          <li>Canada</li>
+          <li>United States</li>
+          <li>Germany</li>
+          <li>Africa</li>
+          <li>India</li>
+        </div>
+      </ul>
+      <div
+        class="2 text-[19.4px] font-medium flex flex-col items-center sm:items-start"
+      >
+        <p class="mb-[20px] sm:text-start text-center">
+          Subscribe to our <br />
+          Newsletter!
+        </p>
+        <div
+          class="bg-white rounded-[30px] flex items-center pl-5 pr-[5px] py-[5px] w-[333px]"
+        >
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="placeholder:text-[#AAAAAA] placeholder:text-[16px] focus:outline-none w-fit h-fit"
+          />
+        </div>
+        <p class="mt-[40px]">Follow Us on</p>
+        <img src="images/Frame 66.png" alt="socials" class="mt-[33px]" />
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
